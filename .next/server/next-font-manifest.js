@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/prateeksingh/Desktop/Websites/meanwhile-book-manual/app/layout\":[\"static/media/844dc71011366724-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
