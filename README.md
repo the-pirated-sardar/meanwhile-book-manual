@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Intro
 
-## Getting Started
+I was given a book with 3,856 possible story paths. My programmer brain took over and now the fun is to solve the whole book.
 
-First, run the development server:
+## Project Info
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+All story blobs are stored as images.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+All images are labelled and exist within the repo, however the connections are still being mapped out manually.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Once that is done, a DFS/BFS/A* algorithm will map out all possible story outcomes and the project will be updated with the paths found. 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## About The Book
 
-## Learn More
+This project is based on the book Meanwhile by Jason Shiga, a cartoonist and math graduate. The book was put togheter using algorithms, so it's only fair that it be decoded using those as well. 
 
-To learn more about Next.js, take a look at the following resources:
+## Manually Adding Storylines
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Currently, 5 storylines exist on the website. They were manually added as the node graph is still being constructed. This was done using the following terminal commands:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Adding a Storyline:
 
-## Deploy on Vercel
+'''
+npm run path:add -- --path "I-1->I-2->I-3->I-5->I-51->I-50->I-47->FI-1->H-3->H-2->H-1->E-1" --title "Vanilla Timeline"
+'''
+This example command was used to create Story 1. Any addition will go at the end of the list and be named S-XYZ, where XYZ would be 001 for story 1. 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deleting a Storyline:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+'''
+npm run story:rm -- --id S-001
+'''
+This example can be used to purge Story 1, if it exists.
