@@ -9,9 +9,8 @@ export default function HomePage() {
   const disabled = isDesktop === false;
 
   return (
-    // Fill exactly one viewport and prevent scrolling on this page
     <main className="fixed inset-0 overflow-hidden">
-      {/* BG image */}
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <NextImage
           src="/images/landing-bg.jpg"
@@ -23,55 +22,58 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/40 [mask-image:radial-gradient(ellipse_at_center,rgba(0,0,0,1)_45%,transparent_100%)]" />
       </div>
 
-      {/* Foreground: single-screen grid, no scroll */}
+      {/* Foreground layout */}
       <div
         className="
-          relative z-10 h-screen w-full
-          grid grid-rows-[minmax(0,1fr)_auto_auto] gap-4
-          items-center justify-items-center
-          px-4 sm:px-6"
+          relative z-1 h-screen w-full
+          flex flex-col items-center justify-start
+          px-4 sm:px-6 pt-[7vh] gap-10
+        "
       >
-        {/* Cover (auto-shrinks if space is tight) */}
-        <div className="w-full flex items-end justify-center">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
+        {/* Cover image */}
+        <div className="w-full flex justify-center">
           <img
             src="/images/cover.png"
             alt="Meanwhile book cover"
             className="
               block object-contain drop-shadow-xl
-              max-h-[min(58vh,78vw)]
-              transition-transform hover:-translate-y-0.5
+              max-h-[min(55vh,68vw)]
+              transition-transform hover:-translate-y-1.5
             "
           />
         </div>
 
-        {/* Text block — sized to fit without creating scroll */}
-        <div className="w-full max-w-5xl text-center space-y-3 select-text">
-          <p className="
+        {/* Text section */}
+        <div className="w-full max-w-3xl text-center space-y-4 select-text">
+          <p
+            className="
               font-semibold leading-snug
               [font-size:clamp(1.05rem,1.8vw,1.35rem)]
               [color:#fde047] [text-shadow:3px_3px_10px_rgba(0,0,0,0.95)]
-            ">
-              I was given a book with 
-              <span className="underline-pop [color:white] [text-shadow:2px_2px_10px_rgba(0,0,0,1)] font-extrabold">
-                &nbsp;3,856
-              </span>{" "}
-              possible story paths...
+            "
+          >
+            I was given a book with
+            <span className="underline-pop [color:white] [text-shadow:2px_2px_10px_rgba(0,0,0,1)] font-extrabold">
+              &nbsp;3,856
+            </span>{" "}
+            possible story paths...
           </p>
 
-          <p className="
+          <p
+            className="
               font-semibold leading-snug
               [font-size:clamp(1.05rem,1.8vw,1.35rem)]
               [color:#fde047] [text-shadow:3px_3px_10px_rgba(0,0,0,0.95)]
-            ">
-            My programmer brain took over and now the fun is to 
+            "
+          >
+            My programmer brain took over and now the fun is to{" "}
             <span className="italic">solve&nbsp;</span>
             the whole book. Probably a DFS backtracking problem? Still figuring that out.
           </p>
         </div>
 
-        {/* Big, unmistakable button */}
-        <div className="relative">
+        {/* Button (closer to text now) */}
+        <div className="relative mt-2">
           <button
             onClick={() => router.push("/stories")}
             disabled={disabled}
@@ -80,9 +82,11 @@ export default function HomePage() {
                         px-10 py-5 text-2xl font-extrabold tracking-wide text-black
                         shadow-[0_0_25px_rgba(253,224,71,0.7)]
                         transition-transform
-                        ${disabled
-                          ? "opacity-60 cursor-not-allowed"
-                          : "hover:scale-[1.06] active:scale-[0.98]"}
+                        ${
+                          disabled
+                            ? "opacity-60 cursor-not-allowed"
+                            : "hover:scale-[1.06] active:scale-[0.98]"
+                        }
                        `}
             aria-label="View stories so far"
           >
