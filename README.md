@@ -20,14 +20,14 @@ Currently, 5 storylines exist on the website. They were manually added as the no
 
 ### Adding a Storyline:
 
-'''
+```
 npm run path:add -- --path "I-1->I-2->I-3->I-5->I-51->I-50->I-47->FI-1->H-3->H-2->H-1->E-1" --title "Vanilla Timeline"
-'''
+```
 This example command was used to create Story 1. Any addition will go at the end of the list and be named S-XYZ, where XYZ would be 001 for story 1. 
 
 ### Deleting a Storyline:
 
-'''
+```
 npm run story:rm -- --id S-001
-'''
+```
 This example can be used to purge Story 1, if it exists.
