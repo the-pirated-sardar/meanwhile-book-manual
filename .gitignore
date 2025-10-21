@@ -4,3 +4,7 @@ node_modules
 out
 # OS
 .DS_Store
+node_modules
+.next
+out
+.DS_Store
