@@ -52,12 +52,11 @@ export default function HomePage() {
               [font-size:clamp(1.05rem,1.8vw,1.35rem)]
               [color:#fde047] [text-shadow:3px_3px_10px_rgba(0,0,0,0.95)]
             ">
-            I asked someone to get me a book I&apos;d like, with a promise to finish it before we
-            meet next. She gamed the ask and handed me a book with{" "}
-            <span className="underline-pop [color:white] [text-shadow:2px_2px_10px_rgba(0,0,0,1)] font-extrabold">
-              3,856
-            </span>{" "}
-            possibilities.
+              I was given a book with 
+              <span className="underline-pop [color:white] [text-shadow:2px_2px_10px_rgba(0,0,0,1)] font-extrabold">
+                &nbsp;3,856
+              </span>{" "}
+              possible story paths...
           </p>
 
           <p className="
@@ -65,7 +64,9 @@ export default function HomePage() {
               [font-size:clamp(1.05rem,1.8vw,1.35rem)]
               [color:#fde047] [text-shadow:3px_3px_10px_rgba(0,0,0,0.95)]
             ">
-            Let this be my way to <span className="italic">"complete"&nbsp;</span> the book.
+            My programmer brain took over and now the fun is to 
+            <span className="italic">solve&nbsp;</span>
+            the whole book. Probably a DFS backtracking problem? Still figuring that out.
           </p>
         </div>
 
@@ -85,7 +86,7 @@ export default function HomePage() {
                        `}
             aria-label="View stories so far"
           >
-            <span className="relative z-10">STORIES I FOUND SO FAR →</span>
+            <span className="relative z-10">STORIES FOUND SO FAR →</span>
             <span
               aria-hidden
               className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent opacity-0 group-hover:opacity-40 transition-opacity"
