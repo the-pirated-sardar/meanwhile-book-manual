@@ -12,7 +12,7 @@ Once that is done, a DFS/BFS/A* algorithm will map out all possible story outcom
 
 ## About The Book
 
-This project is based on the book Meanwhile by Jason Shiga, a cartoonist and math graduate. The book was put togheter using algorithms, so it's only fair that it be decoded using those as well. 
+This project is based on the book Meanwhile by Jason Shiga, a cartoonist and math graduate. The book was put together using algorithms, so it's only fair that it be decoded using those as well. 
 
 ## Manually Adding Storylines
 

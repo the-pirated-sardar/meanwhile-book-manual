@@ -2,6 +2,10 @@
 import { useRouter } from "next/navigation";
 import { useDeviceGate } from "@/hooks/useDeviceGate";
 import NextImage from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function HomePage() {
   const router = useRouter();
@@ -70,6 +74,18 @@ export default function HomePage() {
             <span className="italic">solve&nbsp;</span>
             the whole book. Probably a DFS backtracking problem? Still figuring that out.
           </p>
+          <p
+            className="
+              font-semibold leading-snug
+              [font-size:clamp(1.05rem,1.8vw,1.35rem)]
+              [color:#fde047] [text-shadow:3px_3px_10px_rgba(0,0,0,0.95)]
+            "
+          >
+            <a href="https://github.com/the-pirated-sardar/meanwhile-book-manual" target="_blank">
+              Visit the GitHub repo for more details on the project <FontAwesomeIcon icon={faArrowUpRightFromSquare}/>
+            </a>
+          </p>
+
         </div>
 
         {/* Button (closer to text now) */}
@@ -90,7 +106,7 @@ export default function HomePage() {
                        `}
             aria-label="View stories so far"
           >
-            <span className="relative z-10">STORIES FOUND SO FAR →</span>
+            <span className="relative z-10">STORIES FOUND SO FAR <FontAwesomeIcon icon={faArrowRight} /></span>
             <span
               aria-hidden
               className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-transparent opacity-0 group-hover:opacity-40 transition-opacity"

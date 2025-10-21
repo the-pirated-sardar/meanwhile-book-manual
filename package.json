@@ -11,6 +11,9 @@
     "story:rm": "node scripts/rm-story.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.0",
     "@next/mdx": "^15.5.6",
     "clsx": "^2.1.1",
     "next": "15.5.6",

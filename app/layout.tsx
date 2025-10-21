@@ -2,6 +2,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Luckiest_Guy } from "next/font/google";
+import "@/lib/fontawesome";
 
 const comic = Luckiest_Guy({
   weight: "400",
