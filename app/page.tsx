@@ -53,7 +53,7 @@ export default function HomePage() {
               [color:#fde047] [text-shadow:3px_3px_10px_rgba(0,0,0,0.95)]
             ">
             I asked someone to get me a book I&apos;d like, with a promise to finish it before we
-            meet next. She gamed the task and handed me a book with{" "}
+            meet next. She gamed the ask and handed me a book with{" "}
             <span className="underline-pop [color:white] [text-shadow:2px_2px_10px_rgba(0,0,0,1)] font-extrabold">
               3,856
             </span>{" "}
